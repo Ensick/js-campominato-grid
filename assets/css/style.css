@@ -23,3 +23,8 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.ms-color-custom{
+    background-color: #454545;
+    color: white;
+}
