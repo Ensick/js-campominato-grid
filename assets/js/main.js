@@ -15,6 +15,8 @@ function AvviaGioco(){
 
     let box = document.getElementById("box")
 
+    box.innerHTML = ""
+
     for (let x = 1; x <= 100; x++) {
     
         let divNuovo = document.createElement("div")
