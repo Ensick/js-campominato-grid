@@ -11,16 +11,48 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 - con difficoltà 3 => 49 caselle, con un numero compreso tra 1 e 49, divise in 7 caselle per 7 righe;
  */
 
+
+let modalita = document.getElementById("modalita")
+
+let sceltaDifficolta;
+
+
 function AvviaGioco(){
+
+    if(modalita.value == 1){
+
+        sceltaDifficolta = 100
+
+    }else if(modalita.value == 2){
+
+        sceltaDifficolta = 81
+
+    }else{
+
+        sceltaDifficolta = 49
+
+    }
 
     let box = document.getElementById("box")
 
     box.innerHTML = ""
 
-    for (let x = 1; x <= 100; x++) {
+    for (let x = 1; x <= sceltaDifficolta; x++) {
     
+
         let divNuovo = document.createElement("div")
         divNuovo.classList.add("box-js")
+
+        
+        if(sceltaDifficolta == 81){
+        
+            divNuovo.classList.add("ms-w-normale")
+    
+        }else if( sceltaDifficolta == 49){
+    
+            divNuovo.classList.add("ms-w-difficile")
+    
+        }
     
         divNuovo.addEventListener('click' , function(){
             

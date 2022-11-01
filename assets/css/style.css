@@ -46,3 +46,14 @@ img{
     background-color: #454545;
     color: white;
 }
+
+.ms-w-normale{
+
+    width: calc(100% / 9);
+}
+
+
+.ms-w-difficile{
+
+    width: calc(100% / 7);
+}
